@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDVBTourneys - Tournaments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1><a href="index.html">SDVBTourneys</a></h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tournaments.html">Tournaments</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="upcoming-tournaments">
+            <h2>Upcoming Tournaments</h2>
+            <div class="tournament-upcoming">
+                <h3>Spring Tournament</h3>
+                <a href="https://forms.gle/fRE3nnqgyzBuAkRX7">Sign Up Here!</a>
+            </div>
+        </section>
+        <section id="previous-tournaments">
+            <h2>Previous Tournaments</h2>
+            <div class="tournament">
+                <h3 class="collapsible" style="padding:10px;">Max and Stef's Birthday Tournament</h3>
+                <div class="tournament-details">
+                    <a href="https://docs.google.com/spreadsheets/d/19n_ERlVI005RfQ1x-Q4b2mI7Kdy9yQYb9vNP6R2G1_4">Tournament Results</a>
+                    <div class="enlarged-image">
+                        <img src="Photos/bday.jpeg" alt="Tournament Photo" class="enlarged">
+                    </div>
+                    <p>Winners: <strong>Anthony and Rachael</strong></p>
+                    <img src="Photos/bday.jpeg" alt="Tournament Photo" class="thumbnail">
+                </div>
+            </div>
+            <div class="tournament">
+                <h3 class="collapsible" style="padding:10px;">Friendsgiving Tournament</h3>
+                <div class="tournament-details">
+                    <a href="https://docs.google.com/spreadsheets/d/1a_uhYhtqShVPJEKWMr41OxskTl62sOwq6y0gcijS4L8">Tournament Results</a>
+                    <div class="enlarged-image">
+                        <img src="Photos/friendsgiving.jpeg" alt="Tournament Photo" class="enlarged">
+                    </div>
+                    <p>Winners: <strong>Wade and Jade</strong></p>
+                    <img src="Photos/friendsgiving.jpeg" alt="Tournament Photo" class="thumbnail">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.thumbnail').forEach(function(thumbnail) {
+            thumbnail.addEventListener('click', function() {
+                thumbnail.parentElement.querySelector('.enlarged-image').style.display = 'flex';
+            });
+        });
+
+        document.querySelectorAll('.enlarged-image').forEach(function(enlargedImage) {
+            enlargedImage.addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.collapsible').forEach(function(item) {
+            item.addEventListener('click', function() {
+                this.classList.toggle('active');
+                var details = this.nextElementSibling;
+                if (details.style.display === 'block') {
+                    details.style.display = 'none';
+                } else {
+                    details.style.display = 'block';
+                }
+            });
+        });
+</script>
+
+</body>
+</html>
