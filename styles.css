@@ -5,7 +5,9 @@ body {
     padding: 0;
     background-color: #fef9ef; /* Light cream */
     color: #333; /* Dark gray */
-    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 main {
@@ -177,6 +179,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+
 /* footer */
 footer {
     background-color: #333; /* Background color for the footer */
@@ -184,16 +187,7 @@ footer {
     padding: 20px; /* Padding for the footer content */
     text-align: center; /* Center-align the content */
     display: block; /* Hide the footer by default */
-}
-
-@media (min-height: 600px) {
-    footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: block; /* Show the footer when the viewport height exceeds 600px */
-    }
+    margin-top: auto;
 }
 
 footer nav {
