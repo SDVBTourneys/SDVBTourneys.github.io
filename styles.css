@@ -59,6 +59,42 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.feature-section {
+    padding: 50px 0;
+}
+
+.feature-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-content img {
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.text-box {
+    flex: 1;
+}
+
+.text-box h2 {
+    margin-top: 0;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .feature-content {
+        flex-direction: column;
+    }
+
+    .feature-content img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
 /* FAQ Page */
 #faq .question {
     margin-bottom: 20px;
@@ -202,6 +238,10 @@ footer nav ul {
 footer nav ul li {
     display: inline;
     margin-right: 20px; /* Add space between footer links */
+}
+
+footer nav ul li:last-child {
+    margin-right: 0; /* Add space between footer links */
 }
 
 footer nav ul li a {
