@@ -1725,7 +1725,6 @@ input, select, textarea {
 
 .tournament .collapsible {
     cursor: pointer;
-    text-decoration: underline;
 }
 
 /* Tournaments Page */
